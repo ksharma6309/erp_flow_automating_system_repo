@@ -168,44 +168,35 @@ Logging	JSON Audit Logs
 
 **📁 Project Structure**
 
-''' 
-ERPFlowAutomator/
-│── app/
-│   ├── agents/
-│   │   ├── planner.py
-│   │   ├── executor.py
-│   │   └── auditor.py
-│   ├── tools/
-│   │   ├── invoice_service.py
-│   │   ├── po_service.py
-│   │   ├── inventory_service.py
-│   │   └── grn_service.py
-│   ├── db/
-│   │   ├── init_db.py
-│   │   └── seed_data.sql
-│   ├── rules/
-│   │   ├── audit_policies.json
-│   │   └── matching_rules.json
-│   ├── schemas/
-│   │   ├── invoice_models.py
-│   │   └── po_models.py
-│   ├── audit/
-│   │   └── audit_log.json
-│   └── main.py
-│
-│── ui/
-│   ├── streamlit_app.py
-│   └── audit/
-│       ├── settings.json
-│       └── inventory.json
-│
-│── tests/
-│── requirements.txt
-│── docker-compose.yaml
-│── Dockerfile
-│── README.md
+- **ERPFlowAutomator/**
+  - **app/**
+    - **agents/**
+      - `planner.py` — Planner agent implementation
+      - `executor.py` — Executor agent & tool caller
+      - `auditor.py` — Audit rules & decisioning
+    - **tools/**
+      - `po_service.py` — mock PO tool (FastAPI)
+      - `invoice_service.py`
+      - `inventory_service.py`
+      - `grn_service.py`
+    - **db/**
+      - `init_db.py` — schema & seed loader
+      - `seed_data.sql`
+    - **rules/**
+      - `matching_rules.json`
+      - `audit_policies.json`
+    - `main.py`
+  - **ui/**
+    - `streamlit_app.py`
+    - **audit/**
+      - `settings.json`
+      - `inventory.json`
+  - **tests/**
+  - `requirements.txt`
+  - `docker-compose.yml`
+  - `Dockerfile`
+  - `README.md`
 
-'''
 
 **⚙️ Installation Guide**
 1. Create Virtual Environment
