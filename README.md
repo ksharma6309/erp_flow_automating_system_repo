@@ -1,59 +1,43 @@
-<img width="1280" height="720" alt="2" src="https://github.com/user-attachments/assets/f4286c81-9e35-40f8-bd8e-6a4ba682d9dd" />
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+**🧠 ERP Flow Automator - Capstone Project – Google Kaggle: Enterprise AI Systems**
 
-📑** Table of Contents**
+## 📑 Table of Contents
+- [Project Summary](#project-summary)
+- [Project Description](#project-description)
+- [Architecture](#architecture)
+- [Features](#features)
+- [Modules](#modules)
+- [Tech Stack](#tech-stack)
+- [Project Structure](#project-structure)
+- [Installation Guide](#installation-guide)
+- [VS Code Commands](#vs-code-commands)
+- [Running the App](#running-the-app)
+- [API Endpoints](#api-endpoints)
+- [Streamlit UI Overview](#streamlit-ui-overview)
+- [Testing](#testing)
+- [Future Enhancements](#future-enhancements)
+- [Screenshots](#screenshots)
+- [Author](#author)
 
-1. Introduction
 
-2. Problem Statement
+**⭐ PROJECT SUMMARY**
 
-3. Why Agentic AI?
+ERP Flow Automator is an intelligent, agentic AI system built using the Planner → Executor → Auditor architecture to automate critical ERP finance workflows. The system validates Purchase Orders (PO), Invoices, GRN receipts, Inventory stock levels, and Tax calculations using safe OpenAPI tools and rule-based audit checks. It delivers deterministic decisions, complete trace logs, mismatch summaries, and human-readable explanations designed for enterprise-grade accuracy and transparency. Built with FastAPI, Python agents, SQLite, and Streamlit UI, this project demonstrates how agentic AI can automate manual ERP validation tasks reliably and reproducibly.
 
-4. Project Overview
+**⭐ PROJECT DESCRIPTION**
 
-5. Architecture
+Enterprise finance teams spend significant time manually validating invoices, purchase orders, GRN receipts, inventory stock levels, and tax calculations. This process is repetitive, error-prone, difficult to audit, and costly when mismatches slip through. The ERP Flow Automator solves this by applying a structured, deterministic Agentic AI workflow that ensures accuracy, transparency, and safe tool usage according to Google’s Agentic AI Bootcamp standards.
 
-6. Features
+The system follows the Planner → Executor → Auditor pattern.
 
-7. Modules
+The Planner Agent generates a structured validation plan that outlines which ERP tools need to be called and in what sequence.
 
-8. Tech Stack
+The Executor Agent safely executes only approved OpenAPI-defined tools (such as fetching PO, Invoice, GRN, Inventory, and Tax Rate data). It logs each request–response pair with correlation IDs for full traceability.
 
-9. Project Structure
+The Auditor Agent applies strict business rules (quantity validation, price matching, tax calculation, GRN verification, inventory checks) and produces a final decision — APPROVE or ESCALATE — along with a structured mismatch summary, reason explanation, and audit log entry.
 
-10. Installation Guide
+Each module (Invoice ↔ PO Matching, GRN Checker, Inventory Checker, and Tax Validator) is implemented as a fully independent, testable workflow. The Streamlit UI showcases the plan, execution trace, mismatches, and auditor decision with clear, intuitive visualizations. SQLite acts as a lightweight mock ERP backend, enabling rapid testing without external dependencies. The project demonstrates enterprise features like deterministic output, audit-safe logging, extensible rule files, and reproducible workflows — all within a lightweight and developer-friendly architecture.
 
-10. VS Code Commands
-
-11. Running the App
-
-12. API Endpoints
-
-13. Streamlit UI Overview
-
-14. Testing
-
-15. Future Enhancements
-
-16. Screenshots
-
-17. Author
-
-**🧭 Introduction**
-
-ERP Flow Automator is an enterprise-grade agentic AI system designed to automate common ERP finance workflows such as:
-
-Invoice ↔ Purchase Order Matching
-
-GRN Verification
-
-Inventory Stock Audit
-
-Tax Validation
-
-The project is built using the Planner → Executor → Auditor architecture taught in the Google Kaggle 5-Day Agents Bootcamp.
-
-It demonstrates safe tool usage, deterministic execution, traceability, audit logs, and transparent results.
+The outcome is a compact yet powerful demonstration of how agentic AI can automate ERP workflows with accuracy, safety, and full audit compliance, making it ideal for enterprise automation, AI engineering portfolios, and Kaggle capstone evaluation.
 
 **🧩 Problem Statement**
 
@@ -123,6 +107,7 @@ Auditor summary
 
 Deterministic decision (APPROVE / ESCALATE)
 
+
 **🏗️ Architecture**
 **Planner → Executor → Auditor flow**
 
@@ -183,6 +168,7 @@ Logging	JSON Audit Logs
 
 **📁 Project Structure**
 
+''' 
 ERPFlowAutomator/
 │── app/
 │   ├── agents/
@@ -218,6 +204,8 @@ ERPFlowAutomator/
 │── docker-compose.yaml
 │── Dockerfile
 │── README.md
+
+'''
 
 **⚙️ Installation Guide**
 1. Create Virtual Environment
