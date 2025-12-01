@@ -1,0 +1,22 @@
+{
+  "ITEM-01": {
+    "item_id": "ITEM-01",
+    "description": "Widget A",
+    "on_hand": 100
+  },
+  "ITEM-02": {
+    "item_id": "ITEM-02",
+    "description": "Widget B",
+    "on_hand": 2
+  },
+  "ITEM-03": {
+    "item_id": "ITEM-03",
+    "description": "Widget C",
+    "on_hand": 50
+  },
+  "ITEM-04": {
+    "item_id": "ITEM-04",
+    "description": "Widget D",
+    "on_hand": 0
+  }
+}

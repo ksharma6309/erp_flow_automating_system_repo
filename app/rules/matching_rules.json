@@ -1,0 +1,23 @@
+{
+  "version": "1.0",
+  "rules": {
+    "quantity_mismatch": {
+      "type": "threshold",
+      "tolerance": 0.0,
+      "description": "Exact quantity match required"
+    },
+    "price_mismatch": {
+      "type": "percentage",
+      "tolerance_pct": 0.0,
+      "description": "No price variance allowed"
+    },
+    "vendor_mismatch": {
+      "description": "Vendor ID must match"
+    },
+    "total_mismatch": {
+      "type": "absolute",
+      "tolerance": 0.0,
+      "description": "Totals must match exactly"
+    }
+  }
+}

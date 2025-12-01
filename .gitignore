@@ -1,0 +1,36 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environment
+.venv/
+.env/
+
+# VS Code
+.vscode/
+
+# PyCharm
+.idea/
+
+# FastAPI Cache / Build
+*.db-journal
+*.sqlite-journal
+
+# Streamlit
+.streamlit/
+
+# Logs
+logs/
+*.log
+
+# OS generated
+.DS_Store
+Thumbs.db
+
+# Local DB
+app/db/erp.db
+
+# Env variables
+.env

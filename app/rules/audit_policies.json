@@ -1,0 +1,19 @@
+{
+  "version": "1.0",
+  "policies": {
+    "approve_if_all_match": {
+      "conditions": ["no_quantity_mismatch","no_price_mismatch","vendor_match","total_match"],
+      "decision": "APPROVE"
+    },
+    "escalate_on_any_mismatch": {
+      "conditions": ["any_mismatch"],
+      "decision": "ESCALATE",
+      "escalation_reasons_map": {
+        "quantity_mismatch": "Quantity mismatch on line(s)",
+        "price_mismatch": "Unit price mismatch on line(s)",
+        "vendor_mismatch": "Vendor mismatch",
+        "total_mismatch": "Total not matching"
+      }
+    }
+  }
+}
