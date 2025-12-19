@@ -251,10 +251,15 @@ streamlit run ui/streamlit_app.py
 pytest tests/
 
 **🖥️ API Endpoints**
+
 Method	Route	Description
+
 GET	/invoice/{id}	Fetch invoice
+
 GET	/po/{id}	Fetch purchase order
+
 GET	/inventory/{item_id}	Check stock
+
 POST	/validate/po-invoice	Validate invoice vs PO
 
 
